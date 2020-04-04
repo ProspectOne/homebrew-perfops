@@ -1,8 +1,8 @@
 class Perfops < Formula
   desc "The PerfOps API command-line interface tool"
   homepage "https://perfops.net/cli"
-  url "https://github.com/ProspectOne/perfops-cli.git", :tag => "v0.7.9"
-  version "0.7.9"
+  url "https://github.com/ProspectOne/perfops-cli.git", :tag => "v0.8.1"
+  version "0.8.1"
   head "https://github.com/ProspectOne/perfops-cli.git"
 
   depends_on "go"
