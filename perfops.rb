@@ -5,29 +5,39 @@
 class Perfops < Formula
   desc ""
   homepage "https://github.com/ProspectOne/perfops-cli"
-  version "0.8.9"
+  version "0.8.10"
 
   on_macos do
-    url "https://github.com/ProspectOne/perfops-cli/releases/download/v0.8.9/perfops-cli_0.8.9_Darwin_all.tar.gz"
-    sha256 "b0006be3582d822fad6ce31dd6c2d0d2eee9e94b126e24493ac2c1ce2b5b63df"
-
-    def install
-      bin.install "perfops-cli"
-    end
-  end
-
-  on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ProspectOne/perfops-cli/releases/download/v0.8.9/perfops-cli_0.8.9_Linux_arm64.tar.gz"
-      sha256 "9fbd538c2d2f8990831637b840350f90f289db8268de087830ef3f432654eb92"
+    if Hardware::CPU.arm?
+      url "https://github.com/ProspectOne/perfops-cli/releases/download/v0.8.10/perfops-cli_0.8.10_Darwin_arm64.tar.gz"
+      sha256 "92c3516bf913b537255146b2f49d5d944bb6a3ca9c20029b78dc9106b511868d"
 
       def install
         bin.install "perfops"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ProspectOne/perfops-cli/releases/download/v0.8.9/perfops-cli_0.8.9_Linux_x86_64.tar.gz"
-      sha256 "44b2df0bf5cf063a2a56fefd3eadb73ddc0d8d096bb8dbcf3860ac1ed0ff3f34"
+      url "https://github.com/ProspectOne/perfops-cli/releases/download/v0.8.10/perfops-cli_0.8.10_Darwin_x86_64.tar.gz"
+      sha256 "41b7dd059271a2196629936c49a40d3fbab8dd72a6e33a5651036f3d0e952da1"
+
+      def install
+        bin.install "perfops"
+      end
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ProspectOne/perfops-cli/releases/download/v0.8.10/perfops-cli_0.8.10_Linux_arm64.tar.gz"
+      sha256 "eec8ec3792cfe0138bdae0b3a474c7287acc89bdf494901f68c53ac995d7fb6b"
+
+      def install
+        bin.install "perfops"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/ProspectOne/perfops-cli/releases/download/v0.8.10/perfops-cli_0.8.10_Linux_x86_64.tar.gz"
+      sha256 "7d46338ffe8d712a1dc951d5a842cff8ed00aa0846839d5c4723cfe2a1aeea50"
 
       def install
         bin.install "perfops"
