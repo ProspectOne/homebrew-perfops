@@ -12,7 +12,7 @@ class Perfops < Formula
     sha256 "96b0fc61db45c7159accb7ab067239978b59d0a260177a8ebe847612b7a99e4a"
 
     def install
-      bin.install "perfops-cli"
+      bin.install "perfops"
     end
   end
 
