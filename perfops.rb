@@ -5,29 +5,29 @@
 class Perfops < Formula
   desc ""
   homepage "https://github.com/ProspectOne/perfops-cli"
-  version "0.8.7"
+  version "0.8.8"
 
   on_macos do
-    url "https://github.com/ProspectOne/perfops-cli/releases/download/v0.8.7/perfops-cli_0.8.7_Darwin_all.tar.gz"
-    sha256 "f6645232189157466f2fb1768b93ce6e4b6adb4538dadc0f843a42b41dd5d85b"
+    url "https://github.com/ProspectOne/perfops-cli/releases/download/v0.8.8/perfops-cli_0.8.8_Darwin_all.tar.gz"
+    sha256 "2a62eb2323cf6d51fc53fc6c34d253021928376f5c5ce1654f2dfbfce1988392"
 
     def install
-      bin.install "perfops-cli"
+      bin.install "perfops"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ProspectOne/perfops-cli/releases/download/v0.8.7/perfops-cli_0.8.7_Linux_arm64.tar.gz"
-      sha256 "1908ed0ebd1b81a4998d7e7722659a8d3c40db1637cf07080ef0d8f5128e4fb4"
+      url "https://github.com/ProspectOne/perfops-cli/releases/download/v0.8.8/perfops-cli_0.8.8_Linux_arm64.tar.gz"
+      sha256 "7b467d6ba1ddb760d4b5400ba4f46114f41803d2f7181248cb330da7a5513325"
 
       def install
         bin.install "perfops"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ProspectOne/perfops-cli/releases/download/v0.8.7/perfops-cli_0.8.7_Linux_x86_64.tar.gz"
-      sha256 "b8e17501b2c4b7653e5418f587406b9ce6124d038156c80f2ff60e63ca2a6904"
+      url "https://github.com/ProspectOne/perfops-cli/releases/download/v0.8.8/perfops-cli_0.8.8_Linux_x86_64.tar.gz"
+      sha256 "81b55cec2afdd438d0a324fa8a6ba450f0826055bfb8a90ccdb27f8533470794"
 
       def install
         bin.install "perfops"
