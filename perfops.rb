@@ -5,20 +5,20 @@
 class Perfops < Formula
   desc ""
   homepage "https://github.com/ProspectOne/perfops-cli"
-  version "0.8.10"
+  version "0.8.11"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ProspectOne/perfops-cli/releases/download/v0.8.10/perfops-cli_0.8.10_Darwin_arm64.tar.gz"
-      sha256 "92c3516bf913b537255146b2f49d5d944bb6a3ca9c20029b78dc9106b511868d"
+      url "https://github.com/ProspectOne/perfops-cli/releases/download/v0.8.11/perfops-cli_0.8.11_Darwin_arm64.tar.gz"
+      sha256 "b26c431c1192c7f9bf1aff8cf31f85c1c2620a7aacf7dcf75cbbc06ecaae08c3"
 
       def install
         bin.install "perfops"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ProspectOne/perfops-cli/releases/download/v0.8.10/perfops-cli_0.8.10_Darwin_x86_64.tar.gz"
-      sha256 "41b7dd059271a2196629936c49a40d3fbab8dd72a6e33a5651036f3d0e952da1"
+      url "https://github.com/ProspectOne/perfops-cli/releases/download/v0.8.11/perfops-cli_0.8.11_Darwin_x86_64.tar.gz"
+      sha256 "f81dfa2b103a8782d3fabb7a57c92994e80809dc1509bb297c3119bbbcf7cc60"
 
       def install
         bin.install "perfops"
@@ -28,16 +28,16 @@ class Perfops < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ProspectOne/perfops-cli/releases/download/v0.8.10/perfops-cli_0.8.10_Linux_arm64.tar.gz"
-      sha256 "eec8ec3792cfe0138bdae0b3a474c7287acc89bdf494901f68c53ac995d7fb6b"
+      url "https://github.com/ProspectOne/perfops-cli/releases/download/v0.8.11/perfops-cli_0.8.11_Linux_arm64.tar.gz"
+      sha256 "c008b571e9f241f45966a7ba2886bb9263d3cdf78b3f07c454e562725a38a830"
 
       def install
         bin.install "perfops"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ProspectOne/perfops-cli/releases/download/v0.8.10/perfops-cli_0.8.10_Linux_x86_64.tar.gz"
-      sha256 "7d46338ffe8d712a1dc951d5a842cff8ed00aa0846839d5c4723cfe2a1aeea50"
+      url "https://github.com/ProspectOne/perfops-cli/releases/download/v0.8.11/perfops-cli_0.8.11_Linux_x86_64.tar.gz"
+      sha256 "da19a83dd8fd12210f638bb8a5a808b95d9f8beca482b6984760eeb784ca219e"
 
       def install
         bin.install "perfops"
